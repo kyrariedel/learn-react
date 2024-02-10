@@ -2,12 +2,16 @@
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Profile from './components/profile'
+import Gallery from './qcomps/gallery_props' //must begin with uppercase
+import Profile from './components/profile_props'
+import FirstComp from './qcomps/firstcomp'
+import Bios from './qcomps/bios'
+import TodoList from './qcomps/todos'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Profile />
+        <Gallery />
     </div>
   )
 }

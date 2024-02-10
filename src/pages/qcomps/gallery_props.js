@@ -1,13 +1,13 @@
-export default function Gallery() {
+function Profile({scientist, size = 100}) {
   return (
     <div>
       <h1>Notable Scientists</h1>
       <section className="profile">
-        <h2>Maria Skłodowska-Curie</h2>
+        <h2>{scientist.name}</h2>
         <img
           className="avatar"
-          src='https://i.imgur.com/szV5sdGs.jpg'
-          alt="Maria Skłodowska-Curie"
+          src= {'https://i.imgur.com/' + scientist.imageId + ".jpg"}
+          alt = {scientist.name}
           width={70}
           height={70}
         />
@@ -41,7 +41,7 @@ export default function Gallery() {
             geochemist
           </li>
           <li>
-            <b>Awards: 2 </b>
+            <b>Awards: {scientist.awards.split(',')} </b>
             (Miyake Prize for geochemistry, Tanaka Prize)
           </li>
           <li>
@@ -52,4 +52,12 @@ export default function Gallery() {
       </section>
     </div>
   );
+}
+
+export default function Gallery() {
+  return (
+    <div>
+    <h1> Notable Scientists </h1>
+    </div>
+  )
 }
